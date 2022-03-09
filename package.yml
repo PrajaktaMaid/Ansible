@@ -1,0 +1,10 @@
+-  
+   name: Upgrade yum package for rhel server
+   hosts: all
+   become: true
+   tasks:
+   -  
+       name: Update all packages     
+       yum:
+         name: '*'
+         state: latest
